@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply bg-white text-black relative font-sans h-screen overflow-x-hidden;
+  }
+}
+
+@keyframes expand {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 60%;
+    opacity: 1;
+  }
+  100% {
+    width: 60%;
+    opacity: 0.6;
+  }
+}
+
+.animate-expand {
+  animation: expand 4s ease-in-out infinite;
+}
+
+
