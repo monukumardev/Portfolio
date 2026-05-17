@@ -174,7 +174,7 @@ function Projects() {
     {
       title: "Gently",
       tech: "React • Tailwind • Material UI",
-      github: "#",
+      github: "https://github.com/monukumardev/GENTLY",
       preview: "https://gently-orcin.vercel.app",
       images: [Gently1, Gently2, Gently3],
     },
