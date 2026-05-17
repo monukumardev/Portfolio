@@ -40,13 +40,12 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-gray-600 text-sm sm:text-base lg:text-lg max-w-md mb-6 leading-relaxed">
-            Building clean user interfaces and strong backend systems that
-            scale. Turning complex problems into elegant digital experiences.
+            Building scalable web applications, intelligent backend systems, and AI-powered solutions using modern technologies and Generative AI workflows.
           </p>
 
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-3 mb-6 justify-center lg:justify-start">
-            {["React", "Django", "Python", "MySQL"].map((tech, index) => (
+            {["React", "Django", "LangChain", "Ollama"].map((tech, index) => (
               <span
                 key={index}
                 className="group relative px-5 py-2 rounded-full text-sm font-semibold

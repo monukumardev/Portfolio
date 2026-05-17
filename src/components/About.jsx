@@ -2,99 +2,194 @@ import React from "react";
 
 const About = () => {
   const skills = [
-    { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-    { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-    { name: "JS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-    { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
-    { name: "Django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
-    { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+    {
+      name: "React",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      name: "Django",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+    },
+    {
+      name: "MySQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    },
+    {
+      name: "LangChain",
+      icon: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/langchain.png",
+    },
+    {
+      name: "Python",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    },
+    {
+      name: "Docker",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    },
+    {
+      name: "Git",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    },
+    {
+      name: "Tailwind",
+      icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+    },
   ];
 
   return (
     <section
       id="about"
-      // h-screen and flex ensure it is EXACTLY the height of your monitor and centered
-      className="relative w-full h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-emerald-50/30 overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#f8fafc] py-14 px-6"
     >
-      {/* Soft Animated Background */}
-      <div className="absolute top-0 left-[10%] w-[500px] h-[500px] bg-blue-400/20 blur-[100px] rounded-full animate-pulse pointer-events-none"></div>
-      <div className="absolute bottom-0 right-[10%] w-[400px] h-[400px] bg-emerald-400/20 blur-[100px] rounded-full animate-pulse pointer-events-none" style={{ animationDelay: "1.5s" }}></div>
+      {/* Background Glow */}
+      <div className="absolute top-[-10%] left-[5%] w-[400px] h-[400px] bg-blue-300/20 blur-[120px] rounded-full"></div>
+      <div className="absolute bottom-[-10%] right-[5%] w-[350px] h-[350px] bg-emerald-300/20 blur-[120px] rounded-full"></div>
 
-      {/* Bento Grid Container */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
-        
-        {/* BENTO BOX 1: Main Intro (Spans 2 Columns) */}
-        <div className="md:col-span-2 bg-white/70 backdrop-blur-xl border border-white rounded-3xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-          <div className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-blue-50 border border-blue-100">
-            <i className="bx bx-user text-blue-500"></i>
-            <span className="text-xs font-bold tracking-wider text-blue-700 uppercase">About Me</span>
-          </div>
-          
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight mb-4 leading-tight">
-            I build digital products that <br className="hidden lg:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-emerald-500">
-              scale and succeed.
-            </span>
-          </h2>
-          
-          <p className="text-gray-600 text-sm lg:text-base leading-relaxed mb-4">
-            Hi, I’m <strong>Monu Kumar</strong>. I specialize in engineering highly scalable frontends using <strong>React and Tailwind CSS</strong>, backed by resilient server-side architectures built with <strong>Django and MySQL</strong>.
-          </p>
-          <p className="text-gray-600 text-sm lg:text-base leading-relaxed hidden sm:block">
-            Beyond just writing code, I focus on system design, RESTful APIs, and smooth Docker deployments to turn abstract ideas into functional, revenue-generating reality.
-          </p>
-        </div>
+      {/* Main Card */}
+      <div className="relative z-10 max-w-7xl w-full bg-white/70 backdrop-blur-2xl border border-white rounded-[36px] shadow-xl overflow-hidden">
 
-        {/* BENTO BOX 2: Quick Status/Highlight (Spans 1 Column) */}
-        <div className="md:col-span-1 bg-gradient-to-br from-blue-600 to-emerald-500 rounded-3xl p-6 lg:p-8 text-white shadow-lg flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300">
-          <div>
-            <i className="bx bx-code-alt text-4xl mb-4 opacity-80"></i>
-            <h3 className="text-2xl font-bold mb-1">Full Stack</h3>
-            <p className="text-blue-100 text-sm">Developer</p>
-          </div>
-          
-          <div className="mt-8">
-            <div className="flex items-center gap-2 text-sm font-medium bg-black/20 w-fit px-4 py-2 rounded-full backdrop-blur-sm border border-white/10">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
-              </span>
-              Available for work
-            </div>
-          </div>
-        </div>
+        {/* Grid Overlay */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)] bg-[size:32px_32px]"></div>
 
-        {/* BENTO BOX 3: Skills Ribbon (Spans all 3 Columns to save vertical height) */}
-        <div className="md:col-span-3 bg-white/70 backdrop-blur-xl border border-white rounded-3xl p-6 shadow-sm flex flex-col justify-center">
-          <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 text-center">My Tech Stack</p>
-          
-          {/* Tightly packed horizontal flex container */}
-          <div className="flex flex-wrap items-center justify-center gap-4 lg:gap-8">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="group flex flex-col items-center gap-2 cursor-pointer hover:-translate-y-1 transition-transform duration-300"
-              >
-                {/* Icon wrapper */}
-                <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center group-hover:shadow-md transition-all">
-                  <img
-                    src={skill.icon}
-                    alt={skill.name}
-                    className="w-7 h-7 group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <span className="text-[11px] font-semibold text-gray-500 group-hover:text-blue-600 transition-colors">
-                  {skill.name}
+        <div className="relative z-10 p-6 lg:p-10">
+
+          {/* Top Bar */}
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+
+            <div className="flex flex-wrap items-center gap-3">
+
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100">
+                <i className="bx bx-user text-blue-600"></i>
+                <span className="text-xs font-bold tracking-wider text-blue-700 uppercase">
+                  About Me
                 </span>
               </div>
-            ))}
-          </div>
-        </div>
 
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-100">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span className="text-xs font-semibold text-emerald-700">
+                  Available for work
+                </span>
+              </div>
+
+            </div>
+
+            {/* Small Badge */}
+            <div className="hidden md:flex items-center gap-2 px-4 py-2 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 text-white shadow-lg">
+              <i className="bx bx-code-alt text-lg"></i>
+              <span className="text-sm font-medium">
+                Full Stack Developer
+              </span>
+            </div>
+
+          </div>
+
+          {/* Hero Section */}
+          <div className="grid lg:grid-cols-[1.3fr_.7fr] gap-10 items-center">
+
+            {/* Left Content */}
+            <div>
+
+              {/* Heading */}
+              <h2 className="text-[38px] md:text-[52px] font-black leading-[1.02] tracking-tight text-gray-900">
+                Scalable AI Products
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-emerald-500 mt-2">
+                  Full Stack Engineering
+                </span>
+              </h2>
+
+              {/* Description */}
+              <div className="mt-6 space-y-5 max-w-3xl">
+
+                <p className="text-gray-600 text-sm lg:text-[15px] leading-relaxed">
+                  I’m Monu Kumar, a Full Stack Developer focused on building scalable web applications, intelligent backend systems, and AI-powered solutions.
+                </p>
+
+                <p className="text-gray-600 text-sm lg:text-[15px] leading-relaxed">
+                  I work primarily with <strong>React</strong>,{" "}
+                  <strong>Django REST Framework</strong>, and{" "}
+                  <strong>MySQL</strong> to develop modern full-stack applications while integrating Generative AI technologies such as{" "}
+                  <strong>LangChain</strong>, <strong>Ollama</strong>, and{" "}
+                  <strong>LLaMA 3</strong> into real-world workflows.
+                </p>
+
+                <p className="text-gray-600 text-sm lg:text-[15px] leading-relaxed">
+                  From RESTful APIs and backend architecture to RAG pipelines and intelligent dashboards, I enjoy solving complex engineering problems with clean and scalable solutions.
+                </p>
+
+              </div>
+
+
+            </div>
+
+            {/* Right Stats */}
+            <div className="grid grid-cols-2 gap-4">
+
+              {/* Card 1 */}
+              <div className="group rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 p-5 text-white shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-5">
+                  <i className="bx bx-server text-2xl text-blue-400"></i>
+                </div>
+
+                <h4 className="text-3xl font-black">1+</h4>
+                <p className="text-sm text-slate-300 mt-2">
+                  Years Experience
+                </p>
+
+              </div>
+
+              {/* Card 2 */}
+              <div className="group rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-600 p-5 text-white shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-5">
+                  <i className="bx bx-layer text-2xl text-white"></i>
+                </div>
+
+                <h4 className="text-3xl font-black">3+</h4>
+                <p className="text-sm text-blue-100 mt-2">
+                  Production Projects
+                </p>
+
+              </div>
+
+              {/* Card 3 */}
+              <div className="group rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-500 p-5 text-white shadow-xl hover:-translate-y-1 transition-all duration-300">
+
+                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-5">
+                  <i className="bx bx-bot text-2xl text-white"></i>
+                </div>
+
+                <h4 className="text-3xl font-black">AI</h4>
+                <p className="text-sm text-emerald-100 mt-2">
+                  GenAI & RAG Systems
+                </p>
+
+              </div>
+
+              {/* Card 4 */}
+              <div className="group rounded-3xl bg-white border border-slate-200 p-5 shadow-lg hover:-translate-y-1 transition-all duration-300">
+
+                <div className="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center mb-5">
+                  <i className="bx bx-code-block text-2xl text-slate-700"></i>
+                </div>
+
+                <h4 className="text-3xl font-black text-slate-900">
+                  APIs
+                </h4>
+
+                <p className="text-sm text-slate-500 mt-2">
+                  Backend & Integrations
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
       </div>
     </section>
   );
