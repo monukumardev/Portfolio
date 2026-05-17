@@ -1,6 +1,6 @@
 import "boxicons/css/boxicons.min.css";
 import image from "../assets/my-image.jpeg";
-import cv from "../assets/Monu-kumar_Resume.pdf";
+import cv from "../assets/Monu_kumar_Resume.pdf";
 
 const Hero = () => {
   return (
