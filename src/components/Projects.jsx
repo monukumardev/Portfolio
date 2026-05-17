@@ -1,4 +1,11 @@
 import React, { useEffect, useState } from "react";
+import Portfolio1 from "../assets/Portfolio1.png";
+import Portfolio2 from "../assets/Portfolio2.png";
+import Portfolio3 from "../assets/Portfolio3.png";
+import Gently1 from "../assets/Gently-1.png";
+import Gently2 from "../assets/Gently-2.png";
+import Gently3 from "../assets/Gently-3.png";
+
 
 /* ---------- AUTO IMAGE SLIDER ---------- */
 function ImageSlider({ images }) {
@@ -160,32 +167,23 @@ function Projects() {
     {
       title: "Portfolio Website",
       tech: "React • Tailwind",
-      github: "#",
-      preview: "#",
-      images: [
-        "https://picsum.photos/600/400?1",
-        "https://picsum.photos/600/400?2",
-      ],
+      github: "https://github.com/monukumardev/Portfolio",
+      preview: "https://monukumar-portfolio.vercel.app/",
+      images: [Portfolio1, Portfolio2, Portfolio3],
     },
     {
-      title: "CRUD Application",
-      tech: "React • REST API",
+      title: "Gently",
+      tech: "React • Tailwind • Material UI",
       github: "#",
-      preview: "#",
-      images: [
-        "https://picsum.photos/600/400?3",
-        "https://picsum.photos/600/400?4",
-      ],
+      preview: "https://gently-orcin.vercel.app",
+      images: [Gently1, Gently2, Gently3],
     },
     {
       title: "Authentication System",
       tech: "JWT • Secure Login",
       github: "#",
       preview: "#",
-      images: [
-        "https://picsum.photos/600/400?5",
-        "https://picsum.photos/600/400?6",
-      ],
+      images: [Portfolio3, Portfolio1, Portfolio2],
     },
   ];
 
